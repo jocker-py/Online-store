@@ -1,0 +1,51 @@
+/*Footer START*/
+.footer {
+  margin: 0 auto;
+  max-width: 1400px;
+  background-color: $dark;
+  color: $light;
+  height: 100px;
+}
+
+.out__list {
+  display: flex;
+  padding: 0 5vw;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.out__link {
+  display: inline-block;
+  color: $light;
+  transition: all 0.4s;
+}
+
+.out__link:hover {
+  transform: scale(1.1);
+}
+
+.year {
+  font-size: 0.5em;
+  color: $grayDark;
+}
+
+.school {
+  background: url('../assets/img/rs_logo.png');
+  width: 175px;
+  height: 90px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.github {
+  background: url('../assets/img/github.gif');
+  width: 72px;
+  height: 72px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $dark;
+  border-radius: 50%;
+}
+
+/*Footer END*/

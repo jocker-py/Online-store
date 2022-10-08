@@ -1,0 +1,24 @@
+#brand-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.6rem;
+  .brand-filter__input {
+    display: none;
+  }
+  .brand-filter__label {
+    background-color: $grayLight;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid $dark;
+    transition: all 0.4;
+    &.checked {
+      background-color: $pink;
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.header {
+  padding: 15px 0;
+  background-color: $pink;
+  max-width: 1400px;
+  margin: 0 auto;
+  .wrapper {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo__link::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-120%, 10%);
+  display: inline-block;
+  background: url('../assets/img/home.png');
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: '';
+  transition: all 0.7s;
+}
+
+.logo__link {
+  font-family: 'Asset';
+  font-size: 3.2rem;
+  line-height: 3.2rem;
+  filter: drop-shadow(2px 4px 6px $dark);
+}
+
+.logo__link:hover {
+  &::before {
+    background: url('../assets/img/home_light.png');
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: '';
+    filter: drop-shadow(2px 4px 6px #f1c40f);
+    transition: all 0.7s;
+  }
+}

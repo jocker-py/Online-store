@@ -1,0 +1,133 @@
+.main {
+  margin: 0 auto;
+  max-width: 1400px;
+  min-height: 80vh;
+  content: '';
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+}
+
+.categories {
+  background-color: $grayLight;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.categories__items {
+  height: 100px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.categories__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+  &:hover,
+  &--active {
+    transform: translateY(-10px);
+    cursor: pointer;
+  }
+}
+.categories__title {
+  font-size: 1.5rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.categories__img {
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  content: '';
+  margin: 0 auto;
+  transition: all 0.5s;
+  cursor: pointer;
+  &.categories__img--all {
+    background-image: url('../assets/img/home.png');
+  }
+  &.categories__img--armchair {
+    background-image: url('../assets/img/categories/armchair.png');
+  }
+  &.categories__img--bed {
+    background-image: url('../assets/img/categories/bed.png');
+  }
+  &.categories__img--bookshelf {
+    background-image: url('../assets/img/categories/bookshelf.png');
+  }
+  &.categories__img--desk {
+    background-image: url('../assets/img/categories/desk.png');
+  }
+  &.categories__img--kitchen {
+    background-image: url('../assets/img/categories/kitchen.png');
+  }
+  &.categories__img--lamp {
+    background-image: url('../assets/img/categories/lamp.png');
+  }
+  &.categories__img--sofa {
+    background-image: url('../assets/img/categories/sofa.png');
+  }
+}
+
+.categories__view {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.categories__sort {
+  line-height: 1.8rem;
+  font-size: 1.6rem;
+}
+
+.categories__grid {
+  background-image: url('../assets/img/grid.png');
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 20px;
+  &:hover {
+    cursor: pointer;
+    background-color: $light;
+    border-radius: 25%;
+  }
+
+  &--active {
+    background-color: $light;
+    transform: scale(0.9);
+    border-radius: 25%;
+  }
+}
+
+.categories__list {
+  background-image: url('../assets/img/list.png');
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  &:hover {
+    cursor: pointer;
+    background-color: $light;
+    border-radius: 25%;
+    transform: scale(0.9);
+  }
+
+  &--active {
+    background-color: $light;
+    transform: scale(0.9);
+    border-radius: 25%;
+  }
+}
