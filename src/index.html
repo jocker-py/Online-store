@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper">
+        <div class="logo">
+          <a href="../../../Desktop/online-store" class="logo__link">HOME<br />CARE</a>
+        </div>
+        <div class="cart">
+          <a href="#" class="cart__link"></a>
+          <div class="cart__items display--none">0</div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="categories">
+        <ul class="categories__items">
+          <li class="categories__item categories__item--active" id="all">
+            <div class="categories__img categories__img--all"></div>
+            <h3 class="categories__title">all</h3>
+          </li>
+          <li class="categories__item" id="armchair">
+            <div class="categories__img categories__img--armchair"></div>
+            <h3 class="categories__title">armchair</h3>
+          </li>
+          <li class="categories__item" id="bed">
+            <div class="categories__img categories__img--bed"></div>
+            <h3 class="categories__title">bed</h3>
+          </li>
+          <li class="categories__item" id="bookshelf">
+            <div class="categories__img categories__img--bookshelf"></div>
+            <h3 class="categories__title">bookshelf</h3>
+          </li>
+          <li class="categories__item" id="desk">
+            <div class="categories__img categories__img--desk"></div>
+            <h3 class="categories__title">desk</h3>
+          </li>
+          <li class="categories__item" id="kitchen">
+            <div class="categories__img categories__img--kitchen"></div>
+            <h3 class="categories__title">kitchen</h3>
+          </li>
+          <li class="categories__item" id="lamp">
+            <div class="categories__img categories__img--lamp"></div>
+            <h3 class="categories__title">lamp</h3>
+          </li>
+          <li class="categories__item" id="sofa">
+            <div class="categories__img categories__img--sofa"></div>
+            <h3 class="categories__title">sofa</h3>
+          </li>
+        </ul>
+        <ul class="categories__view">
+          <li class="categories__sort">
+            <select class="sort__selection" name="sort">
+              <option selected value="first">A - Z</option>
+              <option value="last">Z - A</option>
+              <option value="new">New - Old</option>
+              <option value="old">Old - New</option>
+              <option value="cheap">Price ↑</option>
+              <option value="expencive">Price ↓</option>
+            </select>
+          </li>
+          <li class="categories__list categories__list--active"></li>
+          <li class="categories__grid"></li>
+        </ul>
+
+        <article class="categories__goods goods">
+          <div class="wrapper">
+            <ul class="goods__list" id="goods__list"></ul>
+          </div>
+        </article>
+      </section>
+
+      <section class="options">
+        <ul class="options__list">
+          <li class="options__item">
+            <form class="form" action="#">
+              <h3 class="form__notification display--none">
+                Sorry, but items doesn't exist
+              </h3>
+              <input
+                type="search"
+                name="search"
+                id="search"
+                class="form__search"
+                autocomplete="off"
+                placeholder="Search..."
+                autofocus
+              />
+            </form>
+          </li>
+          <li class="options__item range">
+            <h3 class="range__main-title">Range filters</h3>
+            <ul class="range__list">
+              <li class="range__item price-filter">
+                <h4 class="range__title">Price</h4>
+                <div id="price-range"></div>
+              </li>
+              <li class="range__item value-filter">
+                <h4 class="range__title">Value</h4>
+                <div id="value-range"></div>
+              </li>
+              <li class="range__item value-filter">
+                <h4 class="range__title">Year</h4>
+                <div id="year-range"></div>
+              </li>
+            </ul>
+          </li>
+
+          <li class="options__item type">
+            <h3 class="type__main-title">Types filters</h3>
+            <ul class="type__list">
+              <li class="type__item">
+                <h4 class="type__title">Brands</h4>
+                <form
+                  action="#"
+                  id="brand-filter"
+                  class="type__filter brand-filter"
+                >
+                  <input
+                    type="checkbox"
+                    id="edison"
+                    name="brand"
+                    value="Walker Edison"
+                    class="brand-filter__input"
+                  />
+                  <label for="edison" class="brand-filter__label"
+                    >Walker Edison</label
+                  >
+                  <input
+                    type="checkbox"
+                    id="ikea"
+                    name="brand"
+                    value="IKEA"
+                    class="brand-filter__input"
+                  />
+                  <label for="ikea" class="brand-filter__label"
+                    >IKEA</label
+                  >
+                  <input
+                    type="checkbox"
+                    id="halmar"
+                    name="brand"
+                    value="HALMAR"
+                    class="brand-filter__input"
+                  />
+                  <label for="halmar" class="brand-filter__label"
+                    >Halmar</label
+                  >
+                  <input
+                    type="checkbox"
+                    id="inspire"
+                    name="brand"
+                    value="INSPIRE Q"
+                    class="brand-filter__input"
+                  />
+                  <label for="inspire" class="brand-filter__label"
+                    >INSPIRE Q</label
+                  >
+                </form>
+              </li>
+              <li class="type__item">
+                <h4 class="type__title">Colors</h4>
+                <form
+                  action="#"
+                  id="color-filter"
+                  class="type__ filter color-filter"
+                >
+                  <input
+                    type="checkbox"
+                    id="gray"
+                    name="color"
+                    value="gray"
+                    class="color-filter__input"
+                  />
+                  <label
+                    for="gray"
+                    class="color-filter__label color-filter__label--gray"
+                  ></label>
+                  <input
+                    type="checkbox"
+                    id="black"
+                    name="color"
+                    value="black"
+                    class="color-filter__input"
+                  />
+                  <label
+                    for="black"
+                    class="color-filter__label color-filter__label--black"
+                  ></label>
+                  <input
+                    type="checkbox"
+                    id="white"
+                    name="color"
+                    value="white"
+                    class="color-filter__input"
+                  />
+                  <label
+                    for="white"
+                    class="color-filter__label color-filter__label--white"
+                  ></label>
+                  <input
+                    type="checkbox"
+                    id="olive"
+                    name="color"
+                    value="olive"
+                    class="color-filter__input"
+                  />
+                  <label
+                    for="olive"
+                    class="color-filter__label color-filter__label--olive"
+                  ></label>
+                  <input
+                    type="checkbox"
+                    id="blue"
+                    name="color"
+                    value="blue"
+                    class="color-filter__input"
+                  />
+                  <label
+                    for="blue"
+                    class="color-filter__label color-filter__label--blue"
+                  ></label>
+                  <input
+                    type="checkbox"
+                    id="brown"
+                    name="color"
+                    value="brown"
+                    class="color-filter__input"
+                  />
+                  <label
+                    for="brown"
+                    class="color-filter__label color-filter__label--brown"
+                  ></label>
+                </form>
+              </li>
+            </ul>
+          </li>
+
+          <li class="options__item options__item--remove">Remove Filters</li>
+          <li class="options__item options__item--reset">Reset Storage</li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <nav class="out">
+        <ul class="out__list">
+          <li class="out__item">
+            <a href="https://github.com/jocker-py" class="out__link github"></a>
+          </li>
+          <li class="out__item year">© 2022 by jocker-py</li>
+          <li class="out__item">
+            <a href="https://rs.school/js/" class="out__link school"></a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+
+    <template class="goods__template">
+      <li class="goods__item">
+        <div class="goods__img">
+          <h3 class="goods__price"></h3>
+        </div>
+        <ul class="goods__about">
+          <li class="goods__title"></li>
+          <li class="goods__description"></li>
+          <li class="goods__brand"></li>
+          <li class="goods__year"></li>
+          <li class="goods__size"></li>
+          <li class="goods__shelf"></li>
+          <li class="goods__values">
+            <h3 class="goods__value"></h3>
+            <h5 class="goods__notification display--none">
+              Not any more in the stock
+            </h5>
+          </li>
+          <li class="goods__cart"></li>
+          <li class="goods__color"></li>
+
+          <li class="goods__actions">
+            <ul class="goods__buttons">
+              <li class="goods__button goods__button--add">+</li>
+              <li class="goods__button goods__button--remove">-</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </template>
+  </body>
+</html>

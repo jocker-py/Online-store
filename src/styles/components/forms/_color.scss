@@ -1,0 +1,43 @@
+.color-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  .color-filter__input {
+    display: none;
+  }
+  .color-filter__label {
+    border: 3px solid $dark;
+    padding: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    opacity: 0.8;
+    transition: all 0.4;
+    &.checked {
+      border: 3px solid $pink;
+      opacity: 1;
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.color-filter__label--gray {
+  background-color: gray;
+}
+.color-filter__label--black {
+  background-color: black;
+}
+.color-filter__label--white {
+  background-color: white;
+}
+.color-filter__label--olive {
+  background-color: olive;
+}
+.color-filter__label--blue {
+  background-color: blue;
+}
+.color-filter__label--brown {
+  background-color: brown;
+}

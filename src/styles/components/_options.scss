@@ -1,0 +1,35 @@
+.options {
+  background-color: $grayDark;
+  padding: 1vw;
+}
+
+.options__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: $light;
+  padding: 1.5vw;
+  border-radius: 1.5vw;
+}
+
+.range__main-title,
+.type__main-title {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+}
+
+.range__item,
+.type__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 25px 0;
+}
+
+.range__title,
+.type__title {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  margin-bottom: 15px;
+}
